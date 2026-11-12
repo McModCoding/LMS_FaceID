@@ -1,0 +1,2042 @@
+{
+  "version": "V3.3-fresh-install",
+  "date": "2026-11-08",
+  "description": "LMS Nam + OpenCV YuNet/SFace; isolated V3.3 Docker volume; setup/login/FaceID unit test improvements; no secrets or weights",
+  "files": [
+    {
+      "path": ".env.example",
+      "bytes": 1543,
+      "sha256": "57025afc718717f33fb332d92afeee1d4ea96cd01671d0628036d9876f80910d"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "bytes": 2504,
+      "sha256": "897fea497cd429cc78b0b721232d7dfafbc92bbb8e5e8de57198a584d1152d5e"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 966,
+      "sha256": "e52be51f3f104d2b648d6296aef36432f43642bfffc73e0fd7c191dfc63167f3"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 2527,
+      "sha256": "f7cb7e6c30e477ddbe619c788c8a4e5f7424455e1543b72ebc63491bf82b6f94"
+    },
+    {
+      "path": "DANH_GIA_SAN_SANG_NOP.md",
+      "bytes": 3641,
+      "sha256": "1717c48b7fc58e8fe3bf40e87cdd58d5c68f64a04df83d405d42ba5b1fc108ec"
+    },
+    {
+      "path": "DIAGNOSE_LMS_WINDOWS.bat",
+      "bytes": 452,
+      "sha256": "b63e1e630705d13e14131e73cd704142a27c593904fd9857e307d6c142dbec4a"
+    },
+    {
+      "path": "HUONG_DAN_CHAY_WINDOWS.md",
+      "bytes": 4781,
+      "sha256": "c4ca82fb85d2a6512d1235de0839fe9b63b823c3f301336f59e09af38e5b2995"
+    },
+    {
+      "path": "KET_QUA_KIEM_THU_BAN_GIAO.md",
+      "bytes": 3241,
+      "sha256": "06ba1566eaf0860a279eebc8d0f41e036fc8b189a3966a6fdb2376acf6de13c1"
+    },
+    {
+      "path": "README.md",
+      "bytes": 7088,
+      "sha256": "48302e637fee77dce0cdf966bf2fc5a53222ae1b25e51d32e49fff411271237a"
+    },
+    {
+      "path": "SEED_DEMO_WINDOWS.bat",
+      "bytes": 444,
+      "sha256": "594fe689442fc56a91861a02a5c273212614a23fd23aafff02a8f1901fb923c9"
+    },
+    {
+      "path": "SETUP_LMS_WINDOWS.bat",
+      "bytes": 446,
+      "sha256": "49ace1b0f6de1406aa62af2daf72ac62af52fc52abbea12018579e6fed5ce11d"
+    },
+    {
+      "path": "SPEC.md",
+      "bytes": 65187,
+      "sha256": "c6f4f6457ee06ca9dfe32183b387f73c42c596fad22426ff80d4583c1ccfad6f"
+    },
+    {
+      "path": "START_LMS_WINDOWS.bat",
+      "bytes": 446,
+      "sha256": "5cc48fd1c1022c9dd05e46a8973d9cbcd655a7ddb9c9d2d8faf6a2227bbc245b"
+    },
+    {
+      "path": "STOP_LMS_WINDOWS.bat",
+      "bytes": 444,
+      "sha256": "43f48468f544fb089d732aba1082fb38f4047da615aaaa06178e316364378115"
+    },
+    {
+      "path": "TEST_LMS_WINDOWS.bat",
+      "bytes": 494,
+      "sha256": "d112f15ce9f6ba9b56305bb909677e03585ab195bdf52bf48c6c636c4353c53f"
+    },
+    {
+      "path": "backend/.dockerignore",
+      "bytes": 90,
+      "sha256": "f7119a8320cfd3fb7491151464c571cdf382525a3956a10db9aa69f23aed8570"
+    },
+    {
+      "path": "backend/Dockerfile",
+      "bytes": 308,
+      "sha256": "0eb9bf9b29ad8d259c69a052c505fbd5d4af2dda0623eef4ead916f287c7cfa4"
+    },
+    {
+      "path": "backend/alembic/env.py",
+      "bytes": 1291,
+      "sha256": "6d47efcdb6b05390fb90fad9dc5cd08e588c4f55983a6a3e2bdf268db7dc23c2"
+    },
+    {
+      "path": "backend/alembic/script.py.mako",
+      "bytes": 495,
+      "sha256": "5fb9b6354a6e5ca4417c2b94eabca2e15a2bc20d113d672325ec66a22bbae071"
+    },
+    {
+      "path": "backend/alembic/versions/0002_m1_danh_muc_va_nguoi_dung.py",
+      "bytes": 6515,
+      "sha256": "a2d5c386d759295903c8c00f07ff62bdef5d6e02fb4b46b0aee6c6197b891538"
+    },
+    {
+      "path": "backend/alembic/versions/0003_add_token_version.py",
+      "bytes": 497,
+      "sha256": "d1b07d8a3fe17e48fcb393b89247ca9b0a343fc38518eb1d8ab306031489c6ed"
+    },
+    {
+      "path": "backend/alembic/versions/0004_m2a_classes.py",
+      "bytes": 8401,
+      "sha256": "b44f1debccfaf05214bc4ff2f668a48a4b01ed9e94e33f6b5eac8b3ad724971d"
+    },
+    {
+      "path": "backend/alembic/versions/0005_m3a_attendance.py",
+      "bytes": 7804,
+      "sha256": "7cc23d35848d5f867f42f0738297927f3eee10ac00fc84b2d08478be03075108"
+    },
+    {
+      "path": "backend/alembic/versions/0006_departments.py",
+      "bytes": 2126,
+      "sha256": "ef9fe269341307e029bf2260f6e1986e363dce5e87daa4041a300756712b99f5"
+    },
+    {
+      "path": "backend/alembic/versions/0007_seed_department_catalogue.py",
+      "bytes": 1809,
+      "sha256": "f36c93427bb2dafcca23734a367f77a4b1b2e692639d6f5c5e4de3e9d21eab53"
+    },
+    {
+      "path": "backend/alembic/versions/0008_m4_m5_learning.py",
+      "bytes": 9706,
+      "sha256": "79a2be13335162962765d148b2c57ccf51dab8ad2ef71c05700ce2e4d2e42036"
+    },
+    {
+      "path": "backend/alembic/versions/0009_m6_question_bank.py",
+      "bytes": 2247,
+      "sha256": "bb663455079d62bf0d262aae5c0cb1925693f1a5c8ef9b674fb3a39fba45e115"
+    },
+    {
+      "path": "backend/alembic/versions/0010_m6_exam_drafts.py",
+      "bytes": 3093,
+      "sha256": "f33f9541e34a3cb1b7a8c0b9c42f27b3b5f99b1a6827e4b9c164be01a3b80298"
+    },
+    {
+      "path": "backend/alembic/versions/0011_m6_exam_snapshots.py",
+      "bytes": 476,
+      "sha256": "d2e70ae09e30a767d6dcf2eaa754d7b204f9f7d350bfbb22bb9e3ebc88457d30"
+    },
+    {
+      "path": "backend/alembic/versions/0012_m6_exam_attempts.py",
+      "bytes": 2752,
+      "sha256": "8afc9cead68fb11590e2862beff4c2d39480b3d6cfe4b5382e672eca31b3905b"
+    },
+    {
+      "path": "backend/alembic/versions/0013_m6_score_capacity.py",
+      "bytes": 636,
+      "sha256": "61b303fdd776b38fd8f19dc47bb662a6a6e2b5fd8b0d273150acaea2f2ea3779"
+    },
+    {
+      "path": "backend/alembic/versions/0014_face_frame_idempotency.py",
+      "bytes": 1189,
+      "sha256": "6a7bc47ff14a470781e383bff33c373170a52d71efc597ed40e221413295fa71"
+    },
+    {
+      "path": "backend/alembic/versions/0015_m5a_materials.py",
+      "bytes": 1284,
+      "sha256": "7fd3bd1e70542596b547ba756c011d4fc2b81f2573dcdff02e123637ea4bb823"
+    },
+    {
+      "path": "backend/alembic/versions/0016_m6_exam_events.py",
+      "bytes": 1247,
+      "sha256": "b830c30084189aa7a38ab753d4a2d831f57c17d868ccebb1deb3a86638b71126"
+    },
+    {
+      "path": "backend/alembic/versions/0017_m7_grades.py",
+      "bytes": 2483,
+      "sha256": "c22d0e5144c6135accc68c60650118d3521343a6d92f041e1c000af83a44a727"
+    },
+    {
+      "path": "backend/alembic/versions/d04d9dcce6c8_initial_schema.py",
+      "bytes": 1618,
+      "sha256": "8dc58096266dbb52fb1497dcf4a44360198a7404fab5824fe6381b6217f3cd6c"
+    },
+    {
+      "path": "backend/alembic.ini",
+      "bytes": 531,
+      "sha256": "ced2b284f8e2cf981c5e3a5cd1af6c0924bd2f10e4a1ae8b2e663d90afd0d577"
+    },
+    {
+      "path": "backend/app/core/config.py",
+      "bytes": 5718,
+      "sha256": "b60a84992997396ab8e907d0a40f5831a7b77b1f8d1e09ae78cb51fbe662b08b"
+    },
+    {
+      "path": "backend/app/core/deps.py",
+      "bytes": 3009,
+      "sha256": "108979962f268f6797ed661d8171f6ce17f188ab9b352aa6e5b27ed374ca8bcf"
+    },
+    {
+      "path": "backend/app/core/security.py",
+      "bytes": 2596,
+      "sha256": "32d8f6ebc1c9c2d37c847a8862b2209f829a045a7b19af1d1b7c8bfd5b6bec88"
+    },
+    {
+      "path": "backend/app/db/base.py",
+      "bytes": 577,
+      "sha256": "1ab23792fcfdeeb9d6af2842267385b084b92e7760dc3ba11bd3c91123d19830"
+    },
+    {
+      "path": "backend/app/db/session.py",
+      "bytes": 298,
+      "sha256": "6274a999dd769676721188233ec84aac48c39a99a68b4c23fadbc286d2408706"
+    },
+    {
+      "path": "backend/app/face/__init__.py",
+      "bytes": 51,
+      "sha256": "67473c905d8e2caafa796f64213cea2f226eeae2405c006f215c32f2940ce75f"
+    },
+    {
+      "path": "backend/app/face/base.py",
+      "bytes": 918,
+      "sha256": "c29aa4d2163ceacd7b183a048374c4040a74bc72902e6e6e5201dbb54166ec2d"
+    },
+    {
+      "path": "backend/app/face/factory.py",
+      "bytes": 1282,
+      "sha256": "2d36a80980db4bc3af673a238d04a622cf4cb7c8d8ed6b095a67db7a8fc1f795"
+    },
+    {
+      "path": "backend/app/face/mock_engine.py",
+      "bytes": 707,
+      "sha256": "70dccdb25eea6aaab6867bf236c75068e1581d853ec47a48d13aaec7a7e31c73"
+    },
+    {
+      "path": "backend/app/face/opencv_engine.py",
+      "bytes": 18198,
+      "sha256": "5dde98c98b864159ae218c4fad8f24d90bf5470471c1a39102123d70921ce7f9"
+    },
+    {
+      "path": "backend/app/main.py",
+      "bytes": 2706,
+      "sha256": "d6c4e08f4490b2d9985f15b96f38e224b6926d1639a980e3c5d4c779fb88158e"
+    },
+    {
+      "path": "backend/app/models/__init__.py",
+      "bytes": 2457,
+      "sha256": "d7f6b1cf35ec734775d46c82baa922b2b2856b77622a4a7ab54179a2ad3ac603"
+    },
+    {
+      "path": "backend/app/models/attendance.py",
+      "bytes": 5050,
+      "sha256": "df2eba83ee8963e8640adf100024f8c4fb1e2580983748a365479a9c0721e443"
+    },
+    {
+      "path": "backend/app/models/audit.py",
+      "bytes": 787,
+      "sha256": "f194e472d318b3e3ce1ab64672ec286aac2e622f0e02aadae856d373613bb3a2"
+    },
+    {
+      "path": "backend/app/models/class_.py",
+      "bytes": 3041,
+      "sha256": "324d1f2856b94bca0ea2b85580a6a238b33086b865c2d32f3ec839264ac78de5"
+    },
+    {
+      "path": "backend/app/models/department.py",
+      "bytes": 896,
+      "sha256": "f001bfd0e0d22924d278aa4c6d1a24c8f4197a4435fffae76151e485cff11667"
+    },
+    {
+      "path": "backend/app/models/exam.py",
+      "bytes": 3222,
+      "sha256": "d71a4f64352611b602043bc4ce2ac5195847b8e2ab89c9a9239b11b342aa6b2c"
+    },
+    {
+      "path": "backend/app/models/exam_attempt.py",
+      "bytes": 2599,
+      "sha256": "31116311d873326877b196960bfe32aa09d7bedb5706a883a8d8c618a31610d2"
+    },
+    {
+      "path": "backend/app/models/exam_event.py",
+      "bytes": 915,
+      "sha256": "047e01d7580ba22b1667afa3fb64159c5ce44b61354dce141a2ae5af7d7010cc"
+    },
+    {
+      "path": "backend/app/models/grade.py",
+      "bytes": 1946,
+      "sha256": "1481733d6f1aada8863ed4d936dd29a207d26f1204926b8496525f36cf6c244e"
+    },
+    {
+      "path": "backend/app/models/learning.py",
+      "bytes": 8337,
+      "sha256": "70fc579f78ba85119a7a6a0c73e39ee47bec826b0318782c019b3f1b1849d90d"
+    },
+    {
+      "path": "backend/app/models/lecturer.py",
+      "bytes": 1437,
+      "sha256": "82a95043103186e86fed535ba5529481cbd1e8f7a4e19b0506f4ad38a6359e7e"
+    },
+    {
+      "path": "backend/app/models/material.py",
+      "bytes": 779,
+      "sha256": "d125e21c248bc74c2fa30227380a990a82d0c5946aa750895808beb217e61d0f"
+    },
+    {
+      "path": "backend/app/models/question.py",
+      "bytes": 2141,
+      "sha256": "4a4fa5440dcdff6903d48eb1484ebe467ec017b6309d35b92155f783b32c08e1"
+    },
+    {
+      "path": "backend/app/models/schedule.py",
+      "bytes": 1033,
+      "sha256": "a8b4e416bd98a8b2a5c9966bb11ca7fd514c3ef1c86e855f9c63ffbcc4f17471"
+    },
+    {
+      "path": "backend/app/models/semester.py",
+      "bytes": 492,
+      "sha256": "54fa5dbd5f1139c4fe1fce49ae3ca3ba5132a9b28c089559d7746837060a1202"
+    },
+    {
+      "path": "backend/app/models/session.py",
+      "bytes": 2796,
+      "sha256": "7280d4ee73216957709d146a296d249e0f3c6d064e410249f396bb152de79081"
+    },
+    {
+      "path": "backend/app/models/student.py",
+      "bytes": 1642,
+      "sha256": "c6c7251056bdc1936f7cfa135b5565a0f321c37b4ecfc667f7439a70cdf43f3c"
+    },
+    {
+      "path": "backend/app/models/subject.py",
+      "bytes": 723,
+      "sha256": "581c66cab355e3d56f0ad0b2af52522bfe5786eaa239664baf6835f060ee3c65"
+    },
+    {
+      "path": "backend/app/models/system.py",
+      "bytes": 337,
+      "sha256": "240dc4638deb5ee97694fe6371ad3e142d4396235641e9f05c969ac7e368ca76"
+    },
+    {
+      "path": "backend/app/models/user.py",
+      "bytes": 1134,
+      "sha256": "457444129b05c2553987c1da3393b5f1b3a193a0f4a6672a47d8081daaee142d"
+    },
+    {
+      "path": "backend/app/routers/attendance.py",
+      "bytes": 9915,
+      "sha256": "d5d8305c753d3f2c933572602854fe8cf94adfa4deabe4ad66866813d531b6e2"
+    },
+    {
+      "path": "backend/app/routers/audit_logs.py",
+      "bytes": 970,
+      "sha256": "8cf3b06ca875eaa669e12e50cf8d5f744e859db58b92bc887df022957df8dfe9"
+    },
+    {
+      "path": "backend/app/routers/auth.py",
+      "bytes": 1507,
+      "sha256": "b988d5463477453d7ad1a3ed34281f1e8e097a58cc74af3032853bc54a4bfac1"
+    },
+    {
+      "path": "backend/app/routers/classes.py",
+      "bytes": 12923,
+      "sha256": "b82105e220d69bc090cf3cc866b1a88a8a70d3b85f60889f99761dbefc928a43"
+    },
+    {
+      "path": "backend/app/routers/dashboard.py",
+      "bytes": 471,
+      "sha256": "174a82fbc494813571025df8991a2e76191e6606c4f17111460c286351dc9e0b"
+    },
+    {
+      "path": "backend/app/routers/departments.py",
+      "bytes": 1808,
+      "sha256": "d866b47f2699319db332083fc17d6540c129b8a1d2c4118c858df3b875a955ec"
+    },
+    {
+      "path": "backend/app/routers/exam_attempts.py",
+      "bytes": 2085,
+      "sha256": "66e918e5a906d703413df64308daadbacfe61b0ff541f2c764f7067f1e4328f9"
+    },
+    {
+      "path": "backend/app/routers/exam_drafts.py",
+      "bytes": 1485,
+      "sha256": "5f41ed6a56669ee1f94ebe2e644d3b42a65d207ce47d143016a9c33de3c5798f"
+    },
+    {
+      "path": "backend/app/routers/exam_management.py",
+      "bytes": 4264,
+      "sha256": "128601310e9dadb431ef467663a5bf0526a1d15930dd5790b5943720db62528c"
+    },
+    {
+      "path": "backend/app/routers/face.py",
+      "bytes": 5417,
+      "sha256": "6f54db03687db59b6044bfe42a1f0c988d160c63d2a5ddbec2f6d307be7f4fc4"
+    },
+    {
+      "path": "backend/app/routers/grades.py",
+      "bytes": 2535,
+      "sha256": "d853c5eb088bcd73d784c70f6b8e17a1e0c61264c4e109d7cb5e225c8f556625"
+    },
+    {
+      "path": "backend/app/routers/learning.py",
+      "bytes": 11859,
+      "sha256": "3d9c0d5844aaa92e51fd8fc326f10da3951955d9553232aa528ad7daada36a0b"
+    },
+    {
+      "path": "backend/app/routers/leave_requests.py",
+      "bytes": 5159,
+      "sha256": "4f56c9b82428134aaf84c061b09b2250350e0d3e3aef1165c6cc307f56612ece"
+    },
+    {
+      "path": "backend/app/routers/lecturers.py",
+      "bytes": 3209,
+      "sha256": "301cffa3a8383205b14c7e7a7130468de6f590d22fb91d0c2d9abbb47334ff9e"
+    },
+    {
+      "path": "backend/app/routers/materials.py",
+      "bytes": 2385,
+      "sha256": "20a71cb9d4744a4d3206a9916f4e2e32382da888797baec5095ec42e6051b547"
+    },
+    {
+      "path": "backend/app/routers/questions.py",
+      "bytes": 3525,
+      "sha256": "ac2b3c3feb928b37b4ef8446654f553bc95fdf41d79c7ab67655f04c4c2020b9"
+    },
+    {
+      "path": "backend/app/routers/semesters.py",
+      "bytes": 2154,
+      "sha256": "6ad8713916bed237a0ada7a267270eb0636df0f4d627ac75d2735bd50f37bcd5"
+    },
+    {
+      "path": "backend/app/routers/sessions.py",
+      "bytes": 4575,
+      "sha256": "e23f22b71fca97e791ef33a1d7b29121326a8eaf31a4527e4e6c0c9670a08758"
+    },
+    {
+      "path": "backend/app/routers/students.py",
+      "bytes": 5178,
+      "sha256": "17dcba3aa17a45bef52ae637edb84bca7a8813f79417c02750417208007aa4e0"
+    },
+    {
+      "path": "backend/app/routers/subjects.py",
+      "bytes": 2234,
+      "sha256": "a47ea346077e8d0e50a3628f4ea0c54cd6576aff0b90d5fe630aaf1c6f2e5d6e"
+    },
+    {
+      "path": "backend/app/routers/system_info.py",
+      "bytes": 410,
+      "sha256": "4d362bd8299e9044845e9068181e8c7efed3153fe8d2ab7f5676f5c7369d7706"
+    },
+    {
+      "path": "backend/app/routers/timetable.py",
+      "bytes": 1847,
+      "sha256": "6e570806390147b556ecbccf806454419ea6caf06809e4ccef3979d30c260d29"
+    },
+    {
+      "path": "backend/app/routers/users.py",
+      "bytes": 1397,
+      "sha256": "18a172435ab6e8cd86fe2fe1793574ff67f71cb53d6e66679126e1aeae2d59d1"
+    },
+    {
+      "path": "backend/app/schemas/__init__.py",
+      "bytes": 1483,
+      "sha256": "53a1256fc2018c9ccba576a97ea3ab30a84a7d074d97f91e67916d2d18c5b554"
+    },
+    {
+      "path": "backend/app/schemas/attendance.py",
+      "bytes": 3252,
+      "sha256": "faaa3c54d2dcabc718dd6669b71be195af6127a8ed105fd272f303de31e0285d"
+    },
+    {
+      "path": "backend/app/schemas/audit.py",
+      "bytes": 505,
+      "sha256": "926b7a61a21f6853acf3f9ff4ac24cc297089bcc9b8c56749fe77907150fead8"
+    },
+    {
+      "path": "backend/app/schemas/auth.py",
+      "bytes": 1138,
+      "sha256": "b4cf5d9c4ff08ec3b33eceaa1e30474a0eb84add4b0fdf8a6fe10780875bb252"
+    },
+    {
+      "path": "backend/app/schemas/class_.py",
+      "bytes": 3615,
+      "sha256": "40bf7c0b0ee10210fab44af034d166694df13612c9f2c45f33195d57c0340eeb"
+    },
+    {
+      "path": "backend/app/schemas/dashboard.py",
+      "bytes": 940,
+      "sha256": "96c7544fc75b703e828b4a8dc1cfbb4773f591e906a1b06d483833aa6f56e12d"
+    },
+    {
+      "path": "backend/app/schemas/department.py",
+      "bytes": 566,
+      "sha256": "2e2877d8dd5e10e38b89a9978bc3fb3da025cc35db306f65eab7f808de2ce84d"
+    },
+    {
+      "path": "backend/app/schemas/exam.py",
+      "bytes": 3745,
+      "sha256": "13e3e0c6d57d8ef08efb80adaec6aa71dd9239497f2fdad29bc30aa6cea2f8ff"
+    },
+    {
+      "path": "backend/app/schemas/exam_attempt.py",
+      "bytes": 3009,
+      "sha256": "fa1c3fd3fa31299b272efb2dd57e0374fc8f708338c7c74c9acc838f56546511"
+    },
+    {
+      "path": "backend/app/schemas/exam_management.py",
+      "bytes": 2259,
+      "sha256": "1bce2f267ecaf80efae10250c6709d48c3b628447ddd5bfc275b512888eba656"
+    },
+    {
+      "path": "backend/app/schemas/face.py",
+      "bytes": 1179,
+      "sha256": "7dde51ff76e7839605061f9d8ad07d9cce8242e8d1762d5cf5499255b11a53b6"
+    },
+    {
+      "path": "backend/app/schemas/grade.py",
+      "bytes": 1793,
+      "sha256": "14e33d03b1b5a89bec51f438089f0b057ca13271c4253bb21775aa2dde7d5e51"
+    },
+    {
+      "path": "backend/app/schemas/learning.py",
+      "bytes": 3382,
+      "sha256": "3b23b98c48ad5f0888aa49f84a8578aaf61191ac6ec585070dcb888ac0c2c762"
+    },
+    {
+      "path": "backend/app/schemas/leave_request.py",
+      "bytes": 1715,
+      "sha256": "c6a8a9e09e7a82299fcdf329409b78105a1584d5b1f11af0739a47e98d7aaefb"
+    },
+    {
+      "path": "backend/app/schemas/lecturer.py",
+      "bytes": 1457,
+      "sha256": "e92c0b05af93cbd69dd2d86bd55bbca2b97492524e17eb2d2bcb2faf4d5e9c0b"
+    },
+    {
+      "path": "backend/app/schemas/material.py",
+      "bytes": 721,
+      "sha256": "aaa827180a89fa42db99fb54c23c646851e12fd02c2af226f039c5db9221dcdf"
+    },
+    {
+      "path": "backend/app/schemas/question.py",
+      "bytes": 2655,
+      "sha256": "46dcb6dfdad6a69b7c29c4b02296fe22d4248c7dc56902668c9e5f9d770da4f4"
+    },
+    {
+      "path": "backend/app/schemas/report.py",
+      "bytes": 2615,
+      "sha256": "62041c0c22155522c2218727ff2ccd85ed765c7c5dba3186e1b20b30b2b7efb1"
+    },
+    {
+      "path": "backend/app/schemas/schedule.py",
+      "bytes": 1729,
+      "sha256": "703e6a2a4f7706641acf99a16fd9bf6bcc667f6c1c5b5d6d3403007e154d31d8"
+    },
+    {
+      "path": "backend/app/schemas/semester.py",
+      "bytes": 909,
+      "sha256": "38d49ca8e4963c29f719e996c954504738aa93406d17e9dbb2494ace16f6f702"
+    },
+    {
+      "path": "backend/app/schemas/session.py",
+      "bytes": 2117,
+      "sha256": "1a6c1a1a5789c91a231ebdd05aaf702a818d4d4d3ba434fcc8f647ef8bc6dd9c"
+    },
+    {
+      "path": "backend/app/schemas/student.py",
+      "bytes": 1857,
+      "sha256": "6ddf9ef4fef5e744405e5feb0e98ec8dc19764c887bec2fba92cce4eed597e92"
+    },
+    {
+      "path": "backend/app/schemas/subject.py",
+      "bytes": 825,
+      "sha256": "3494b7881bfa379bbd39375aba9e20f7cc18dfea89bea5b10722ec2a62da29e7"
+    },
+    {
+      "path": "backend/app/schemas/system_info.py",
+      "bytes": 341,
+      "sha256": "79fb7f36e59ab7491b6ab4c35f8dbb5ee46b51a854ab422767468cbb5f0a25e4"
+    },
+    {
+      "path": "backend/app/schemas/timetable.py",
+      "bytes": 556,
+      "sha256": "852adb77c4808105ea7bbcb2e54ed81f5bd4191c1624599d544507b44dee189d"
+    },
+    {
+      "path": "backend/app/schemas/user.py",
+      "bytes": 187,
+      "sha256": "da5f72c56619e05ef5fba233e7add4f4a9f6f1ad7847a373a7927929274f1fb9"
+    },
+    {
+      "path": "backend/app/seed_data.py",
+      "bytes": 30379,
+      "sha256": "12e6f25aaf22f76cd7ede21c84189d081bfb286ee0a56bb0a09d13c413c063ec"
+    },
+    {
+      "path": "backend/app/services/__init__.py",
+      "bytes": 19,
+      "sha256": "c3f13c40ae919ef292bd4f3ae9e0def01091576eab026e1ddd1f98834e8e5825"
+    },
+    {
+      "path": "backend/app/services/assignment_service.py",
+      "bytes": 18700,
+      "sha256": "6f3961dcfcc619f2c0945a920da3605370a1addd89b77a5d9a97e941465b0be4"
+    },
+    {
+      "path": "backend/app/services/attendance_score.py",
+      "bytes": 964,
+      "sha256": "b75e1a6667fd321fd933b2868777b301695ae41fe3996a42b9f38701cc15f3d1"
+    },
+    {
+      "path": "backend/app/services/attendance_service.py",
+      "bytes": 21971,
+      "sha256": "b32561387f0cedebc81a06f0f8d9cd12db0eff2893e6250875b54e285e4ab610"
+    },
+    {
+      "path": "backend/app/services/audit_query_service.py",
+      "bytes": 2848,
+      "sha256": "121772e7748d2b5f9be9a16ae878801e559c31e8cbf4d258bf2a909764d194e0"
+    },
+    {
+      "path": "backend/app/services/audit_service.py",
+      "bytes": 1639,
+      "sha256": "b17ad4fce9f45cc2ecab18a651ead9507b18cfff7ea541004df66473f72862e5"
+    },
+    {
+      "path": "backend/app/services/auth_service.py",
+      "bytes": 6877,
+      "sha256": "7bc9a1720f55e085d07169589cf7ed70d81505722723138c9359e0ee284324f2"
+    },
+    {
+      "path": "backend/app/services/class_service.py",
+      "bytes": 17069,
+      "sha256": "6978a97a99c8391e06b369c54f82bc16c9e78edeccd8f3d3052a9f02e1cba60f"
+    },
+    {
+      "path": "backend/app/services/conflict_service.py",
+      "bytes": 10951,
+      "sha256": "7ec3c88b24121bbd01aca2f53a80a9b72cef8ad1ca1fcc1eff497931659cd870"
+    },
+    {
+      "path": "backend/app/services/dashboard_service.py",
+      "bytes": 8379,
+      "sha256": "87358ef2d2749e076a7f63fe0661b9076bdebb394f027ec8fd2286aece57d05b"
+    },
+    {
+      "path": "backend/app/services/demo_seed_service.py",
+      "bytes": 24162,
+      "sha256": "c0407c46a84ffb10e023f454810a63924e34e604dd6aa81fcca9e68cf5a933a3"
+    },
+    {
+      "path": "backend/app/services/department_service.py",
+      "bytes": 3262,
+      "sha256": "56008d3ab9e15d2ebf441cbe243df2eafd61041c85016059f7537e1ca66e309c"
+    },
+    {
+      "path": "backend/app/services/enrollment_service.py",
+      "bytes": 19710,
+      "sha256": "0c5ec2743f0da3c1308eca970a1f3ce03d269617b1603a41aabe86b2622d30b3"
+    },
+    {
+      "path": "backend/app/services/exam_attempt_service.py",
+      "bytes": 14708,
+      "sha256": "7663d8c44d2ef743c50d7e215b9681194a3e97523abc5ce4e66cc533de36da4b"
+    },
+    {
+      "path": "backend/app/services/exam_content_service.py",
+      "bytes": 5731,
+      "sha256": "7200f86b231a34fd52a34248dda42c743d2520d1ea46253fa2572b1f96d1bbac"
+    },
+    {
+      "path": "backend/app/services/exam_draft_service.py",
+      "bytes": 7005,
+      "sha256": "a1e4d7078a4801341bdcc9ad3bc7c3e453782f7ca7d580fdb8312a7f1023835b"
+    },
+    {
+      "path": "backend/app/services/exam_event_service.py",
+      "bytes": 2037,
+      "sha256": "3c96754c667b75d34b348e200f83277241bf1279dd84befc6907b8da23b9ac33"
+    },
+    {
+      "path": "backend/app/services/exam_lifecycle_service.py",
+      "bytes": 4501,
+      "sha256": "b6c4c864cd372a6544d77b1e818ae29b5320206ef715586839c287fc1a21b90d"
+    },
+    {
+      "path": "backend/app/services/exam_review_service.py",
+      "bytes": 15717,
+      "sha256": "e897a271cf97038cf5c4fbed5769d078521b536aada4a8ee91b357a6a1ed3c7d"
+    },
+    {
+      "path": "backend/app/services/excel_service.py",
+      "bytes": 12373,
+      "sha256": "77aa2a6f88c23c6e1d10e918d14a045dc7ac6be01c97734b22accd2e22590e64"
+    },
+    {
+      "path": "backend/app/services/face_service.py",
+      "bytes": 19833,
+      "sha256": "b441532d86753ad33d8baabccc3342596e3b3c4074634ee3fbdb3978cc1dc76e"
+    },
+    {
+      "path": "backend/app/services/grade_calculation.py",
+      "bytes": 1025,
+      "sha256": "1ead07744dc33a9ff6cb2ee99aec86035c82b01e9c16206fbf248058e6ef0c7c"
+    },
+    {
+      "path": "backend/app/services/grade_service.py",
+      "bytes": 13658,
+      "sha256": "7de6b8f4143e04f5dfa2ba6e2e2cf547bbcb0e5bb742ea49322951ce6e3aa2aa"
+    },
+    {
+      "path": "backend/app/services/group_service.py",
+      "bytes": 7058,
+      "sha256": "65ad0fdd88f1e0e1930cda0a1f87869557402e6b68e790545af98f7db5dc1c2b"
+    },
+    {
+      "path": "backend/app/services/learning_access.py",
+      "bytes": 2337,
+      "sha256": "b8a3a2ed9a752a5449a7165d686aee0b597d678663ed0a6072e62acc0a9b12e6"
+    },
+    {
+      "path": "backend/app/services/learning_service.py",
+      "bytes": 1817,
+      "sha256": "8fff57ce674b9d9840a549743149e4d1c4671b8db823dc8bfe85a8e958325050"
+    },
+    {
+      "path": "backend/app/services/leave_request_service.py",
+      "bytes": 16835,
+      "sha256": "7dcc9565b4be0eaeab01d9de2b5590636c1f825ca935f511296b3653df3f2974"
+    },
+    {
+      "path": "backend/app/services/lecturer_service.py",
+      "bytes": 11003,
+      "sha256": "e9aea1996d952fd693a1d32e760aa6bd75271268bcec0e796638024fdba3ab4a"
+    },
+    {
+      "path": "backend/app/services/material_service.py",
+      "bytes": 5134,
+      "sha256": "0610166fe65cbafd8a3a4c583d07360c03d42dce4ce59740c341aa30e674f1c3"
+    },
+    {
+      "path": "backend/app/services/notification_service.py",
+      "bytes": 4689,
+      "sha256": "a9eba9a8ef6dfd159be1dac0e259c480c553da603d7e3239c6ef4787c4bb9cfe"
+    },
+    {
+      "path": "backend/app/services/question_import_service.py",
+      "bytes": 3945,
+      "sha256": "8ae45deedee7e83f85bd2289d0e44f33c4b50d3031aa59ea6097243f2c0ddbbc"
+    },
+    {
+      "path": "backend/app/services/question_service.py",
+      "bytes": 5662,
+      "sha256": "30100b32ad69695a64b383bc6dd9745f6ae872c9f16ea98eb905142ee7813dd0"
+    },
+    {
+      "path": "backend/app/services/report_service.py",
+      "bytes": 18395,
+      "sha256": "fe2e352ad9e91ca7928ead5be6197d9ebca8ad31bdd2614ecff65b6722463ccb"
+    },
+    {
+      "path": "backend/app/services/schedule_service.py",
+      "bytes": 15529,
+      "sha256": "19adc0bcd8baf464444a65372e8e1b7609e86d424b55804797ba5e61b51ff2f6"
+    },
+    {
+      "path": "backend/app/services/scheduler.py",
+      "bytes": 1943,
+      "sha256": "2de19fd01ba4d9b5c6ba89af00255eb8963744d34ed22bbc8c34534792086c60"
+    },
+    {
+      "path": "backend/app/services/semester_service.py",
+      "bytes": 3132,
+      "sha256": "0e57724d78c01fe26927519fbf7b3545889b293308307af314ea0b3754c7d3dd"
+    },
+    {
+      "path": "backend/app/services/session_lifecycle_service.py",
+      "bytes": 15765,
+      "sha256": "e124d3e7258d820253cd04cec4e141b9de4eb396b421bf0dda02309642018b16"
+    },
+    {
+      "path": "backend/app/services/session_service.py",
+      "bytes": 9551,
+      "sha256": "495eb66a4fd99a73364367028ee21f83c6460345d781770540fcf9a33fdab95f"
+    },
+    {
+      "path": "backend/app/services/student_service.py",
+      "bytes": 22424,
+      "sha256": "20da1ec08ff9b68fe808a96fbdffddaabf56cc390486b65b28c8a26551820ad7"
+    },
+    {
+      "path": "backend/app/services/subject_service.py",
+      "bytes": 5088,
+      "sha256": "da40ded44878f1b9e022bfd1e826aceb43def5ceb95d26f8c1bc3e509d20383a"
+    },
+    {
+      "path": "backend/app/services/system_info_service.py",
+      "bytes": 773,
+      "sha256": "047b5fcac0fa9c02996ebe2e3013c9df577cc74101d04029832aa9334f705aef"
+    },
+    {
+      "path": "backend/app/services/timetable_service.py",
+      "bytes": 5227,
+      "sha256": "ea20db0e94b8938a3fca98a83ba3702896a3226ebf1997fc04a40ded154d67ea"
+    },
+    {
+      "path": "backend/app/services/user_service.py",
+      "bytes": 2786,
+      "sha256": "5a693c05773a44dd093ef49500fa1444e131a377688bc2de56fd54fd77d985c5"
+    },
+    {
+      "path": "backend/app/utils/clock.py",
+      "bytes": 1088,
+      "sha256": "9a3c9efa11b985cedcd533383d6ed8fa0ca16b0467ac0d6d1ae1a6ddfd4f0748"
+    },
+    {
+      "path": "backend/app/utils/excel.py",
+      "bytes": 9621,
+      "sha256": "88b4a598d42b884c833c2fb5a4737d3422320f77341299b3a35c5f7f04e6f7f9"
+    },
+    {
+      "path": "backend/app/utils/ip.py",
+      "bytes": 260,
+      "sha256": "6bd954f83d9ceab47e175e6f4f3c1b4d4e5929ff6b8f057a912bd4b424661524"
+    },
+    {
+      "path": "backend/app/utils/uploads.py",
+      "bytes": 4272,
+      "sha256": "9ad1efd3fadb804eef9584052068c0c6be68b558c00959a9e2f7851458c2fe24"
+    },
+    {
+      "path": "backend/face_tools/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/face_tools/check_face_engine.py",
+      "bytes": 2923,
+      "sha256": "8e21d951d7528ee385287789405b9688153ad6141b9e4ef42d5e94c3aed7f361"
+    },
+    {
+      "path": "backend/face_tools/download_face_models.py",
+      "bytes": 3573,
+      "sha256": "f3853cc12df8e16e90dea837fecbd86f87517b9358b408dcca9a801ac3f7e9d2"
+    },
+    {
+      "path": "backend/face_tools/evaluation/README.md",
+      "bytes": 1596,
+      "sha256": "e501e6f267a7855e5ea68bd86c352c8c02995fbd0947b799e35228bb20d42036"
+    },
+    {
+      "path": "backend/face_tools/evaluation/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/face_tools/evaluation/_common.py",
+      "bytes": 915,
+      "sha256": "b2fd7059d80ba8a6537d1ae0d9fdde1b4c3fdb50f3807b95e2520f87126de71f"
+    },
+    {
+      "path": "backend/face_tools/evaluation/attendance_comparison.py",
+      "bytes": 2605,
+      "sha256": "ec31c0d80fa923c9df5b3dfa04a17f4707f1a097e5ebc5846ecd3e87db956068"
+    },
+    {
+      "path": "backend/face_tools/evaluation/calibrate_threshold.py",
+      "bytes": 3304,
+      "sha256": "2e832fd44cfa29cf3b8b9070b63915d2ee55e917768f126115ab92ef0b09539e"
+    },
+    {
+      "path": "backend/face_tools/evaluation/classroom_frame_eval.py",
+      "bytes": 3039,
+      "sha256": "8534870e3929b82059ae444d16d26fa1351432551c96e29a301b346d817eb482"
+    },
+    {
+      "path": "backend/face_tools/evaluation/detection_eval.py",
+      "bytes": 4412,
+      "sha256": "07f9d01f9da9cafef03c59a6f1fe754b0469eb6695c7d923f9e15a6f9a4f5ceb"
+    },
+    {
+      "path": "backend/face_tools/evaluation/identification_eval.py",
+      "bytes": 5495,
+      "sha256": "4cbede372c2c466c62357f907bfa827bb2bd2d3d19196e429fd137737c0dfc02"
+    },
+    {
+      "path": "backend/face_tools/evaluation/recognition_eval.py",
+      "bytes": 4172,
+      "sha256": "6f9b5ffdc98597b79e6010ec9ef8cbca2fcedff0320f0ecfa6f1b82e209594ef"
+    },
+    {
+      "path": "backend/models/face/README.md",
+      "bytes": 656,
+      "sha256": "93f737171717011af2923716b8c6df6d6ff86edcf0f3d500c6a5793882b02fba"
+    },
+    {
+      "path": "backend/pyproject.toml",
+      "bytes": 1281,
+      "sha256": "953e15ddf6f062f9df6636131c240e16e0245d5611115d60426caf2390876c76"
+    },
+    {
+      "path": "backend/scripts/seed.py",
+      "bytes": 366,
+      "sha256": "8040c887bc1765473191ac29da03293119b14fd0afd017a61b3e8543b7cf0e53"
+    },
+    {
+      "path": "backend/tests/__init__.py",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "backend/tests/conftest.py",
+      "bytes": 6308,
+      "sha256": "7b88d8d27efed2cba76b7feca4181ed3074e249036eaaf88ec2d5d81798ca339"
+    },
+    {
+      "path": "backend/tests/fixtures/invalid_format.txt",
+      "bytes": 25,
+      "sha256": "adc7b17df36842a7d72a269c97104448d3f872026a2877fa5d30f61e1a1ea4e5"
+    },
+    {
+      "path": "backend/tests/fixtures/students_mixed.xlsx",
+      "bytes": 5259,
+      "sha256": "4ad9f4cde1dbd3d028a0360d50d9f3f1ae47b177488a350158d72bd395879d66"
+    },
+    {
+      "path": "backend/tests/fixtures/students_valid.xlsx",
+      "bytes": 5088,
+      "sha256": "461950d4f4ec24f8689f21dc9f312f8ea54c9092cd94b55fdf860ddb6a5375d2"
+    },
+    {
+      "path": "backend/tests/test_assignment_deadlines.py",
+      "bytes": 8851,
+      "sha256": "7f9a4c824c59359a6e29f152ac96305aab6ba7ff7d8a59830574a21454ab8796"
+    },
+    {
+      "path": "backend/tests/test_attendance.py",
+      "bytes": 20492,
+      "sha256": "2b01d708727c92946028c2ee41f1f7bbd503c9d370036b0787b0c284dd6924ab"
+    },
+    {
+      "path": "backend/tests/test_audit_logs.py",
+      "bytes": 2462,
+      "sha256": "d5496ca9412c84157ac5dec4629c9a2d0ca023f841e80aa4d68d236ef21c2820"
+    },
+    {
+      "path": "backend/tests/test_auth_m1.py",
+      "bytes": 3836,
+      "sha256": "0825711ce0ccb360ce922cac92a7e4648b7df925c9476602c80495f4755cbaef"
+    },
+    {
+      "path": "backend/tests/test_classes.py",
+      "bytes": 17478,
+      "sha256": "0dd4e2db0cad6a5b873c9e1075753c8ae26c59358b92609339a15cb86f4dc811"
+    },
+    {
+      "path": "backend/tests/test_config_security.py",
+      "bytes": 8809,
+      "sha256": "a1e00620a0f49bcf2f2a764d8de5f91816e205be898846ec252ec49683cc000a"
+    },
+    {
+      "path": "backend/tests/test_delivery_routes.py",
+      "bytes": 471,
+      "sha256": "7913bb3b765b04d5b974e6e6211d516c8fd188f07a2ce1d508befd7365693a65"
+    },
+    {
+      "path": "backend/tests/test_delivery_seed_safety.py",
+      "bytes": 1113,
+      "sha256": "dee7893e0a6cdb026d5bedef0d5f17fa6eec381f61a197d394ae3607fde121a7"
+    },
+    {
+      "path": "backend/tests/test_enrollment.py",
+      "bytes": 13119,
+      "sha256": "dfc82be1df015459e6f97327e5fc24bd40e56c70345ee8e8a3b8f7154ea3dcdb"
+    },
+    {
+      "path": "backend/tests/test_excel.py",
+      "bytes": 9014,
+      "sha256": "d41bf4a437eafc49d96272780e49a54d1185d3d4ace35d3db21825c3d6b5e345"
+    },
+    {
+      "path": "backend/tests/test_face_eval.py",
+      "bytes": 5019,
+      "sha256": "0b4e4aa0d2fc94b0df4d39086eef762bcd103649ef8eb7f4dc75a2f0a75e74da"
+    },
+    {
+      "path": "backend/tests/test_face_frame_streaks.py",
+      "bytes": 12793,
+      "sha256": "bdd07c955dfcfa4a3e8dfade50ba63ed4e347045b42781293078763de0dc3847"
+    },
+    {
+      "path": "backend/tests/test_face_privacy.py",
+      "bytes": 17296,
+      "sha256": "43dc5cc10b754889bc4f9a8c8fc1123fa0ff0ac9e765de75ce86b41ead4522aa"
+    },
+    {
+      "path": "backend/tests/test_health.py",
+      "bytes": 156,
+      "sha256": "9d9f1241ecdaeb68fe7ade4bead9f9f742bf7db29a7ee4999a020820b09d440c"
+    },
+    {
+      "path": "backend/tests/test_import_students.py",
+      "bytes": 15945,
+      "sha256": "d17d246b4edd51d13617d957f39f313512801387a77aa40be1a8ba185bdd1bff"
+    },
+    {
+      "path": "backend/tests/test_leave_request.py",
+      "bytes": 14074,
+      "sha256": "840aa758608326d12f85c48444266aae17282e12a6acc33c059d95d1fb960a40"
+    },
+    {
+      "path": "backend/tests/test_lecturers.py",
+      "bytes": 1054,
+      "sha256": "190ed1cbdd59f062008e616b9fcc39e3af0d36ca4deed6ad44c1f9bd51542ab4"
+    },
+    {
+      "path": "backend/tests/test_m4_m5.py",
+      "bytes": 17888,
+      "sha256": "e66882ca5b907cd968b27ca478926d04254eb37fb660b0ca523c1cf3026086d8"
+    },
+    {
+      "path": "backend/tests/test_m6_attempt_api.py",
+      "bytes": 13766,
+      "sha256": "c4ca6ee74493a19eb4452b9278eaaa3399d2353a6804023d426214b64c1183c3"
+    },
+    {
+      "path": "backend/tests/test_m6_attempt_service.py",
+      "bytes": 8950,
+      "sha256": "aec1a521a314d5c1210977b750bad543d5e19fc7ec2af111fe60d22d7a4251ae"
+    },
+    {
+      "path": "backend/tests/test_m6_exam_content.py",
+      "bytes": 4293,
+      "sha256": "b0aadb1258b52ce53d462ac57bd948776b95de2d96f9977680adea6aabbfcc72"
+    },
+    {
+      "path": "backend/tests/test_m6_exam_drafts.py",
+      "bytes": 5611,
+      "sha256": "0e8090a0cf4dc328e10bf2e72541fc701e1de0c01e20e3433214f62e018ade86"
+    },
+    {
+      "path": "backend/tests/test_m6_question_bank.py",
+      "bytes": 5619,
+      "sha256": "d921a855f633ec611526e24b6d8ca4b3b0c9587f00ca56392e15fee8d1d767ea"
+    },
+    {
+      "path": "backend/tests/test_m6_question_foundation.py",
+      "bytes": 2035,
+      "sha256": "8135d9b66e6b09c7535c58534956f266fbc5ff44d4a6168294712466fd129825"
+    },
+    {
+      "path": "backend/tests/test_m7_grade_calculation.py",
+      "bytes": 776,
+      "sha256": "93f3bc56203a2545c23d6b5579b18b9739a9056828a161b76dc4470effc7f560"
+    },
+    {
+      "path": "backend/tests/test_m7_gradebook.py",
+      "bytes": 13179,
+      "sha256": "4c52291c685be037bd98c81172daf5357b5e8ebbbb57d46bf7d876ad9ef6684b"
+    },
+    {
+      "path": "backend/tests/test_m8_acceptance.py",
+      "bytes": 4653,
+      "sha256": "a6d022da6640bb86ec902921cfb2eb642a007d65c7ef4d154a35570588d3be96"
+    },
+    {
+      "path": "backend/tests/test_opencv_engine.py",
+      "bytes": 13384,
+      "sha256": "86e85898b7e010518079b1277fb56dbf00cfc1d415b48d45b5f2ebae4f7fb766"
+    },
+    {
+      "path": "backend/tests/test_phase1.py",
+      "bytes": 8367,
+      "sha256": "8c3cb49eac7e0a54224c95deae39c1863e6a7a8563ecec3628ae9bed35c0faed"
+    },
+    {
+      "path": "backend/tests/test_phase2_exams.py",
+      "bytes": 17703,
+      "sha256": "1fa4af30ea78926a64ba77d48f66660800278c43a8811dcff5e8fc86cf9c3524"
+    },
+    {
+      "path": "backend/tests/test_report.py",
+      "bytes": 12152,
+      "sha256": "c09fb3019a46303305aec37e75f4c056e742052b3b69295399932a4c2746425b"
+    },
+    {
+      "path": "backend/tests/test_schedules.py",
+      "bytes": 16039,
+      "sha256": "093786e3b918f535936fe189777cc928d38af1d15025473e7dc2c2f0d8a8acc2"
+    },
+    {
+      "path": "backend/tests/test_semesters.py",
+      "bytes": 1382,
+      "sha256": "56cab9f3413d198320c42282253416bb86dfd2f8244717d27c2575342ad7f2a7"
+    },
+    {
+      "path": "backend/tests/test_session_lifecycle.py",
+      "bytes": 15732,
+      "sha256": "cdec8c45c886ba7e6755ed21d81c9630819426cc0cb645fd456eaaba151f665b"
+    },
+    {
+      "path": "backend/tests/test_sessions.py",
+      "bytes": 8765,
+      "sha256": "5a21b5902546062b0084d0b98a20f76fdaf607acccf392dd6b59cd5def7c567d"
+    },
+    {
+      "path": "backend/tests/test_students.py",
+      "bytes": 2838,
+      "sha256": "25bde1e0756e67d202b9c6a31ffb7c8b6eb2ea9715b001aac9e00faf22fa6b1e"
+    },
+    {
+      "path": "backend/tests/test_subjects.py",
+      "bytes": 655,
+      "sha256": "093585ab196df14d382e30f4c9c3af4e3480accb94e1b554b6c0f4dcb6f32671"
+    },
+    {
+      "path": "docker-compose.yml",
+      "bytes": 2398,
+      "sha256": "f97e2bd924d022de647906fca57b59da9269f5327e9d3890aabd44781d57e24b"
+    },
+    {
+      "path": "docs/FACE-ENGINE-OPENCV.md",
+      "bytes": 5081,
+      "sha256": "703538c865252af80fd1bab7a266d559e979647572dd5e46b56a5614323f966f"
+    },
+    {
+      "path": "docs/HUONG-DAN-THANH-VIEN-NHOM.md",
+      "bytes": 26326,
+      "sha256": "84af3b6ad49111f02e6ee9061fc233768d2c32f580ae9ff781bd3929e6305881"
+    },
+    {
+      "path": "docs/KIEM-THU-TONG-HOP.md",
+      "bytes": 6334,
+      "sha256": "1c523977670ca7727cbcf989e1b09c29474be0f9766cd9c6b4e8bf1468a63403"
+    },
+    {
+      "path": "docs/openapi.json",
+      "bytes": 396979,
+      "sha256": "0eefe428cbbf6619e1fa5a21e75f13f66e64746f495c6c5294f3d8f153f89cd8"
+    },
+    {
+      "path": "frontend/.dockerignore",
+      "bytes": 94,
+      "sha256": "06cba3fb84c7053e2a864d79b616b55647e7d0ab6bfffc0c0f6ed0b4e569d77c"
+    },
+    {
+      "path": "frontend/Dockerfile",
+      "bytes": 137,
+      "sha256": "aa5a2ae75cc1de3902c8dddb141362a6266cfb79a2a453a7ae0c61647afccdc7"
+    },
+    {
+      "path": "frontend/components.json",
+      "bytes": 415,
+      "sha256": "da7e03cda49e39eed2730c04c3408fff5e412644f6079b7ab3f99bde083ac10d"
+    },
+    {
+      "path": "frontend/e2e/class-cards.spec.ts",
+      "bytes": 5265,
+      "sha256": "039a9d42aca3d710ac7dcb54a5e60e2291bebeda9e7746481b93bf1352860c2c"
+    },
+    {
+      "path": "frontend/e2e/phase1.spec.ts",
+      "bytes": 29493,
+      "sha256": "984401c329cf8d17f8300c8e99385c03079eea813f330781512578c5199d70e6"
+    },
+    {
+      "path": "frontend/e2e/phase2.spec.ts",
+      "bytes": 21855,
+      "sha256": "5767f33145c1b8db5d1217dfaa0e656cb10f56ad867d7d00297df3738f27ccd4"
+    },
+    {
+      "path": "frontend/e2e/phase3.spec.ts",
+      "bytes": 10372,
+      "sha256": "0043f79ee37ebd6687fad24313183fc3e9dc4028e740ad3504e48367a69f59cc"
+    },
+    {
+      "path": "frontend/e2e/phase4.spec.ts",
+      "bytes": 15952,
+      "sha256": "4cdc0b0ab54c8dbac6e13b379ce7acb2910df1294103ac3a1386c041003c5622"
+    },
+    {
+      "path": "frontend/e2e/redesign-overview.spec.ts",
+      "bytes": 5427,
+      "sha256": "5b06f6afafec83e65aeb709de22ff46c9e90a8aa0c424952c73fcb117c32fc24"
+    },
+    {
+      "path": "frontend/e2e/student-overview-review.spec.ts",
+      "bytes": 5330,
+      "sha256": "70791732406526a0887736aef4ed01204442a93edc95d5bf8e262d59e5e53db1"
+    },
+    {
+      "path": "frontend/eslint.config.js",
+      "bytes": 1193,
+      "sha256": "7948676976a8ecfab07115f6fbd9d2ec1333da5a69982dfefdd322eccd8358d2"
+    },
+    {
+      "path": "frontend/index.html",
+      "bytes": 708,
+      "sha256": "ff474b422bd615358e80b884331b7c4baddb38969e7ac328f726e9bb0ef56379"
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "bytes": 217941,
+      "sha256": "e71fb8208d4e42eacad6dd11448f2566e4e864e5b704bd7108840867fffd4806"
+    },
+    {
+      "path": "frontend/package.json",
+      "bytes": 2280,
+      "sha256": "5c6c115263653ed52cf8a2c9caf8b24651ff74993b1cd9dfac6e48dc4758b0cf"
+    },
+    {
+      "path": "frontend/playwright.config.ts",
+      "bytes": 584,
+      "sha256": "c32ecb8946664a67cc9950b17af226af90bb7fb5e5b091e7efa5aaaab6271ebe"
+    },
+    {
+      "path": "frontend/playwright.phase2.config.ts",
+      "bytes": 386,
+      "sha256": "cc088d40b1081f00c86aa4a45675b1274c82c22bf8ec722dd263693242df72c2"
+    },
+    {
+      "path": "frontend/playwright.phase3.config.ts",
+      "bytes": 352,
+      "sha256": "672dfd25a00a121e2f65e91cef18546d5013bdc1e114959ebd11b52ab0ea7de4"
+    },
+    {
+      "path": "frontend/playwright.phase4.config.ts",
+      "bytes": 370,
+      "sha256": "c771a36baa57e3e53f164979f5035445f5e2eaaedfd0d127bd2d4f52e57e6be1"
+    },
+    {
+      "path": "frontend/postcss.config.js",
+      "bytes": 80,
+      "sha256": "190c877db466995bf1482f4a16abd06e04a89ede3119341e2a86ff96e1737b27"
+    },
+    {
+      "path": "frontend/scripts/test-assignment-time.cjs",
+      "bytes": 1401,
+      "sha256": "d4e16ab332462026d4f182aabe459d5f54c146ba761574ee8d3a712701da7e42"
+    },
+    {
+      "path": "frontend/scripts/test-exam-answer-queue.cjs",
+      "bytes": 6871,
+      "sha256": "6166599af9e17622f928ca73d8f90f54b98603403ff13dc59fdc5b59de9cc3b6"
+    },
+    {
+      "path": "frontend/scripts/test-notification-link.cjs",
+      "bytes": 1082,
+      "sha256": "e736a62f210c951c2d4923b18473cc5cfe77a28ef07949aaaf9446f9ac93b3a6"
+    },
+    {
+      "path": "frontend/src/App.tsx",
+      "bytes": 518,
+      "sha256": "d260a6b9c520ab99b13b84f1b86ecf2aa756cf73c09c6e76ded9e6c74a289098"
+    },
+    {
+      "path": "frontend/src/api/attendance.ts",
+      "bytes": 1007,
+      "sha256": "80682aa42fa8edb0fe3a56de477c40ae64886685679e3f203f099b0f9764cf95"
+    },
+    {
+      "path": "frontend/src/api/audit.ts",
+      "bytes": 580,
+      "sha256": "b9f7c9d9e8d140b50b3bcb437a1bc5822c184e52c20c8792a9e91d964e52e310"
+    },
+    {
+      "path": "frontend/src/api/classes.ts",
+      "bytes": 4200,
+      "sha256": "22d8112d73b125cd9c405b2ef81c5aeefbfdf078a8d1acab10e8604204bbef04"
+    },
+    {
+      "path": "frontend/src/api/client.ts",
+      "bytes": 1730,
+      "sha256": "0d3618f379866d1b13beb4a7a70e8e8fafa7b4795ac6380cc6ac59b85a8b6e4a"
+    },
+    {
+      "path": "frontend/src/api/departments.ts",
+      "bytes": 678,
+      "sha256": "9ec6d9f9c96dade41e1fba57a3d5c6fb5166612a0a729ccff6cf5bbcd2af963f"
+    },
+    {
+      "path": "frontend/src/api/exam-drafts.ts",
+      "bytes": 1519,
+      "sha256": "83c504ebe2ec6c07caf45d9b1ff533ed68a0e6be82156a2ff235483d2daff1f1"
+    },
+    {
+      "path": "frontend/src/api/exam-management.ts",
+      "bytes": 3660,
+      "sha256": "300bfd98a1a20a896be1d47ac1bca224a71c7352534003ed8965e3c2f226fe86"
+    },
+    {
+      "path": "frontend/src/api/face.ts",
+      "bytes": 2364,
+      "sha256": "1f4845093cada50761196145b0e184dd2ed1fd11f85379d333f0c22ae8b84bc0"
+    },
+    {
+      "path": "frontend/src/api/learning.ts",
+      "bytes": 4843,
+      "sha256": "0554b9c68283dc478858390f0799adf9f0beb571b9fa9b2a17cdc3ab43a481fd"
+    },
+    {
+      "path": "frontend/src/api/leave-requests.ts",
+      "bytes": 1168,
+      "sha256": "8d18e1e48c5e4d4105cc42f5ebe0f848d2972132673a9f4fd89fb7e0d61cdb95"
+    },
+    {
+      "path": "frontend/src/api/lecturers.ts",
+      "bytes": 1315,
+      "sha256": "ecb7616eb459e6144782cf2eb2898537b5d03664ea00750ee139482ac3dcd22f"
+    },
+    {
+      "path": "frontend/src/api/materials.ts",
+      "bytes": 918,
+      "sha256": "78fdf49b26ad46d926d89fd323bceaf421285864fd6f3222951a68afad221077"
+    },
+    {
+      "path": "frontend/src/api/questions.ts",
+      "bytes": 1753,
+      "sha256": "daa2b280b4aca1f17df23aba59f9b228a44e02ef8c4e8b85156d9c3f98a08b4e"
+    },
+    {
+      "path": "frontend/src/api/semesters.ts",
+      "bytes": 826,
+      "sha256": "d17ad1bcbf8225f0c27b749b781d55ca940a7464b51e15dda4d9a3d8ef239823"
+    },
+    {
+      "path": "frontend/src/api/sessions.ts",
+      "bytes": 819,
+      "sha256": "e681b11ac74ea51bf406c0b0222ad197c65638ba3845683b2326403d34d11f04"
+    },
+    {
+      "path": "frontend/src/api/student-exams.ts",
+      "bytes": 2245,
+      "sha256": "62e82b842a6ff844c49147a1b951b525b27f6ee55c351a22dc30c48410ab48a5"
+    },
+    {
+      "path": "frontend/src/api/students.ts",
+      "bytes": 2242,
+      "sha256": "6de603863d8cab5fd2d31bd27ff032e0d9865bea0f9e2bb0484df0278d2d6dbe"
+    },
+    {
+      "path": "frontend/src/api/subjects.ts",
+      "bytes": 978,
+      "sha256": "ac13b7527c43bcc8779f512f10a03ee637d88665b18af2d182e21c100b14312e"
+    },
+    {
+      "path": "frontend/src/api/timetable.ts",
+      "bytes": 790,
+      "sha256": "d202fb4c0bdbef06f2d765c45f3a99b7085edb15e036f0643720add71c9e80a2"
+    },
+    {
+      "path": "frontend/src/api/users.ts",
+      "bytes": 538,
+      "sha256": "df240922b072eed9f72d6f48a05282e0b57bbf7f8263f2e5a370290d54ffdc98"
+    },
+    {
+      "path": "frontend/src/auth/AuthContext.tsx",
+      "bytes": 2498,
+      "sha256": "9aab0a8c4a68aad42116bf8b3ca2ec021dd03e01d771b63383dac107f245966e"
+    },
+    {
+      "path": "frontend/src/auth/PrivateRoute.tsx",
+      "bytes": 1335,
+      "sha256": "d7140fa8ee484688f6b115ce32c58591f68a1f460ec2f21e28353917c2c74e1d"
+    },
+    {
+      "path": "frontend/src/components/admin/AdminAccountDialogs.tsx",
+      "bytes": 5240,
+      "sha256": "7bc53c9db8f2e47e0ba4d8e70011388bb0eda17f64481cefb362e0162402a779"
+    },
+    {
+      "path": "frontend/src/components/admin/students/StudentImportDialog.tsx",
+      "bytes": 10919,
+      "sha256": "715cbb735f851daba38a4281365380a7b8a76a917f1988c77a5d2d6db501b22e"
+    },
+    {
+      "path": "frontend/src/components/attendance/AttendancePanel.tsx",
+      "bytes": 12922,
+      "sha256": "a394a6b5b235e513a4d374b62a13191c0294f8c6f2733f70b4b6b42cc8025c91"
+    },
+    {
+      "path": "frontend/src/components/attendance/AttendanceReportPanel.tsx",
+      "bytes": 6957,
+      "sha256": "41604f5fb1e90fa8b2a8849d28fc53e4175e1b1a425fdcb819b802dd6a2781ec"
+    },
+    {
+      "path": "frontend/src/components/attendance/MyAttendancePanel.tsx",
+      "bytes": 5886,
+      "sha256": "92a160260460df83a40bd10e3515905ff9832bc14b8b803fa2c7c4f2de32e907"
+    },
+    {
+      "path": "frontend/src/components/classes/ClassCardsPage.tsx",
+      "bytes": 8554,
+      "sha256": "03730be0a73a21ecfff1f52dd6f4274a96d26a858a3f84e79bbaeea472d13718"
+    },
+    {
+      "path": "frontend/src/components/classes/ClassNavigation.tsx",
+      "bytes": 4549,
+      "sha256": "1bd3b081a2ec97f034eb20aa74a0490c11158c43908fccbdbb76d78473963406"
+    },
+    {
+      "path": "frontend/src/components/classes/ClassOverview.tsx",
+      "bytes": 8936,
+      "sha256": "22d293967d8b82b7575828b01984817a5e6b2924201dd9490a3772afc7ff3ae0"
+    },
+    {
+      "path": "frontend/src/components/classes/ClassPageHeader.tsx",
+      "bytes": 1640,
+      "sha256": "a5695f1ce7bd55044343ec653f8910918218244f63c593dfba35a784999f2750"
+    },
+    {
+      "path": "frontend/src/components/classes/ClassSchedulesTab.tsx",
+      "bytes": 34899,
+      "sha256": "fcf967d02d21640f912cf7098f7450faa0e111953a8ed5c7fa51ece86c8e750e"
+    },
+    {
+      "path": "frontend/src/components/classes/ClassStudentsTab.tsx",
+      "bytes": 28682,
+      "sha256": "42b91035678144b70ab6a6b4b025d668fb9796c60fcf1f96aacd15398e9bb6b9"
+    },
+    {
+      "path": "frontend/src/components/classes/CourseCard.tsx",
+      "bytes": 3863,
+      "sha256": "826496d69356209f71f659ff75061add42203746c71c8d74daab0688214ac6e3"
+    },
+    {
+      "path": "frontend/src/components/classes/GradebookPanel.tsx",
+      "bytes": 39659,
+      "sha256": "079f8e33c8620c111361034dcedbd1788e6e436d1e07ebf1aa7a62eedb02239f"
+    },
+    {
+      "path": "frontend/src/components/classes/LearningTabs.tsx",
+      "bytes": 183,
+      "sha256": "f6bee44c7b68d6d693d8264adba3d987ff99a55bbfbff16242b1639cece34734"
+    },
+    {
+      "path": "frontend/src/components/classes/LeaveRequestsPanel.tsx",
+      "bytes": 9880,
+      "sha256": "fd9f9734af8dcae1c336e8dc4e5c5a4cc2413ce5c291b03cb7575902aa674d87"
+    },
+    {
+      "path": "frontend/src/components/classes/MaterialsPanel.tsx",
+      "bytes": 8288,
+      "sha256": "baa4f1543c2fab74696d9fcd6913473d67bd3a98d0a5546b03ba31eb04453a7c"
+    },
+    {
+      "path": "frontend/src/components/classes/QuestionBankPanel.tsx",
+      "bytes": 13775,
+      "sha256": "b6885cdc72f7323d27e2aa749dbf48143d62547dbf14d3665e77fb09b120d255"
+    },
+    {
+      "path": "frontend/src/components/classes/StudentClassOverview.tsx",
+      "bytes": 10122,
+      "sha256": "cb60b5ad4c1d32a66270e27f8054ee810de06b0acd85147e5ee29241eb3fa9ad"
+    },
+    {
+      "path": "frontend/src/components/classes/exams/ExamDraftForm.tsx",
+      "bytes": 13842,
+      "sha256": "a3c75e351acda3488db31a0bca4650b69a2bb4a7e526b6b0039be6a27aef89db"
+    },
+    {
+      "path": "frontend/src/components/classes/exams/ExamDraftPanel.tsx",
+      "bytes": 8671,
+      "sha256": "b7fe6ac41b52252616e4b1865c7b446bafda80f90a2bef9b3fafc5baacca9085"
+    },
+    {
+      "path": "frontend/src/components/classes/exams/ExamManagement.tsx",
+      "bytes": 6842,
+      "sha256": "7e3f4eacaa1e13ec080a411d66d3285edab2c47eb905d21f44ce6fbf70aef1bd"
+    },
+    {
+      "path": "frontend/src/components/classes/exams/ExamReview.tsx",
+      "bytes": 6086,
+      "sha256": "707376903f267c60cc68245c3d127e5265e95689e6b49a58cca2925ba43cd1b3"
+    },
+    {
+      "path": "frontend/src/components/classes/exams/StudentExamResults.tsx",
+      "bytes": 2822,
+      "sha256": "7e409c722fc8464ee9448892d079cb3a7a0b140c5722cfcb96d3a19b5ce45016"
+    },
+    {
+      "path": "frontend/src/components/classes/exams/StudentExamsPanel.tsx",
+      "bytes": 9342,
+      "sha256": "11bf0da08d5197c3d4c0ec1a68cf9e0eb170affc39b2d1cf05b937f70455b4f6"
+    },
+    {
+      "path": "frontend/src/components/classes/learning/AnnouncementsPanel.tsx",
+      "bytes": 6019,
+      "sha256": "30677265a73dd7373b6a17bac16235c3687ed7f4e895f18802cb9858af4a4e8a"
+    },
+    {
+      "path": "frontend/src/components/classes/learning/AssignmentDetailDialog.tsx",
+      "bytes": 8427,
+      "sha256": "7016601d1e4d29ac9317dda6d4a0eb04bdd2b27fd7ad9eb399f21c49633c0b76"
+    },
+    {
+      "path": "frontend/src/components/classes/learning/AssignmentsPanel.tsx",
+      "bytes": 7206,
+      "sha256": "641222d51a0688bf6364a56660be98c074825824230bdc5d5da9e87651b34ea5"
+    },
+    {
+      "path": "frontend/src/components/classes/learning/CreateAssignmentDialog.tsx",
+      "bytes": 6240,
+      "sha256": "51212882637fd75e4612bccb74cada9a1a935c0ee71614d108049e81d0b76c30"
+    },
+    {
+      "path": "frontend/src/components/classes/learning/GradeDialog.tsx",
+      "bytes": 3226,
+      "sha256": "894cd784356d490c0a82dfa830cdd15ae2d4078e5a485c768c7be0ecc7e0e2b8"
+    },
+    {
+      "path": "frontend/src/components/classes/learning/GroupsPanel.tsx",
+      "bytes": 12111,
+      "sha256": "4a8a7d5a551b9be2aaa80e6ce81966bc8159500237ce07af4e64cda474374a94"
+    },
+    {
+      "path": "frontend/src/components/common/Breadcrumb.tsx",
+      "bytes": 938,
+      "sha256": "c95f3e54f678a044df40c13f5eaf6039ea9877bb227b42f4f120897b77ed83bb"
+    },
+    {
+      "path": "frontend/src/components/common/ConflictDialog.tsx",
+      "bytes": 3242,
+      "sha256": "ea6815555fbe6bf3df2a9f77f75bace95bee2c5fd1a5f67e0ae238da16bc4169"
+    },
+    {
+      "path": "frontend/src/components/common/HeroSection.tsx",
+      "bytes": 1448,
+      "sha256": "9b208348024d8325f21fbe7f3b935b51279cab6bcf9a54ddcd8915679cca7535"
+    },
+    {
+      "path": "frontend/src/components/common/MobileNavigation.tsx",
+      "bytes": 1388,
+      "sha256": "25c7051ab440a7674ad46b501489ace08caf4ed2a000739ca4a399743fdd8ee0"
+    },
+    {
+      "path": "frontend/src/components/common/NotificationBell.tsx",
+      "bytes": 3460,
+      "sha256": "991a69d96e78f9b17281c8b2854418aaacb924cc844593401b486a9b3d972b51"
+    },
+    {
+      "path": "frontend/src/components/common/PageLoadBoundary.tsx",
+      "bytes": 711,
+      "sha256": "165a3a36952eabf9f2518fb01ff6e1aeadbfa50822d24c9d128b42ccd3a58176"
+    },
+    {
+      "path": "frontend/src/components/common/RemoteSearchSelect.tsx",
+      "bytes": 3317,
+      "sha256": "e5354d66adf389cd1ef36ee9c4f1fcc8e163fa59c08bc856af2e157baee5adc5"
+    },
+    {
+      "path": "frontend/src/components/common/RemoteState.tsx",
+      "bytes": 1426,
+      "sha256": "26f0af894d795ca747f96f94df5136aa404adc0f7738a98282183ba6a17ea59f"
+    },
+    {
+      "path": "frontend/src/components/common/WeeklyTimetable.tsx",
+      "bytes": 10469,
+      "sha256": "cfe41d52c1c32208bf6bffd8de235d87e6dda17580ea08a19fc8045a5fabc84e"
+    },
+    {
+      "path": "frontend/src/components/common/status-badge.tsx",
+      "bytes": 2700,
+      "sha256": "90e5661f4202120a16e44e75847bbbb59c7ef4f0410d6fd63bfe36d792597cf6"
+    },
+    {
+      "path": "frontend/src/components/theme-provider.tsx",
+      "bytes": 1776,
+      "sha256": "9034a1e04e84bb802324f488354f2334712357abcd29c53fb3b4f7ea3508c3d6"
+    },
+    {
+      "path": "frontend/src/components/theme-toggle.tsx",
+      "bytes": 1222,
+      "sha256": "504d0979bde9083dfaf4be81a3b156055db4d69ae925cf1e971e74309c8a9467"
+    },
+    {
+      "path": "frontend/src/components/ui/alert-dialog.tsx",
+      "bytes": 4236,
+      "sha256": "95e78965a60239e298a5fff9e7fd8e251c693201906ef3f6b9ba80aef42a6473"
+    },
+    {
+      "path": "frontend/src/components/ui/alert.tsx",
+      "bytes": 1630,
+      "sha256": "7a431fa6af073a2c85f616c10c9bc715afbc7235f1e217948b36867c780c8a32"
+    },
+    {
+      "path": "frontend/src/components/ui/badge.tsx",
+      "bytes": 1301,
+      "sha256": "b8a782ea5eb1c282d82b6a591092167cb544d8b209dd10937642c252a7513d7a"
+    },
+    {
+      "path": "frontend/src/components/ui/button.tsx",
+      "bytes": 1906,
+      "sha256": "c64649b8bdeea457ae34e570e6562ddad56bb7b022e1beaf7993bd39f2b79f9e"
+    },
+    {
+      "path": "frontend/src/components/ui/card.tsx",
+      "bytes": 1817,
+      "sha256": "2f95e05a7a0acebdcf80bc59173f4ffe3bbbb58d135dc955810a514cc4bfa39b"
+    },
+    {
+      "path": "frontend/src/components/ui/checkbox.tsx",
+      "bytes": 687,
+      "sha256": "815745575b0f93c56ed1747c32a5d8b2471d29b90c04f0d9f865290cff6bfd10"
+    },
+    {
+      "path": "frontend/src/components/ui/dialog.tsx",
+      "bytes": 4340,
+      "sha256": "a9d4bd0a5e2da8400c034c0f686dbec70b7dfeac290195df1c53d6886b929037"
+    },
+    {
+      "path": "frontend/src/components/ui/dropdown-menu.tsx",
+      "bytes": 6987,
+      "sha256": "594e48283b236a2bdd609412a85fa123b5438520b19de2272fc83e85af6f7494"
+    },
+    {
+      "path": "frontend/src/components/ui/input.tsx",
+      "bytes": 857,
+      "sha256": "50534fa2348abef8c95768561a686f4cf84c12bc07395841e1773facfc51102a"
+    },
+    {
+      "path": "frontend/src/components/ui/label.tsx",
+      "bytes": 709,
+      "sha256": "06918510992f80ed81cb6eb6d40f47c8129f5d323d406d36205a9e7526d8f74b"
+    },
+    {
+      "path": "frontend/src/components/ui/scroll-area.tsx",
+      "bytes": 1610,
+      "sha256": "b9f66529878e40c2be6999510c8bd89e5bb129523563701357c40a2fd64d5636"
+    },
+    {
+      "path": "frontend/src/components/ui/select.tsx",
+      "bytes": 5281,
+      "sha256": "e1be4577053df9a451840e7a9e83f746cb459613f7d027d092d388d0aeaf1e21"
+    },
+    {
+      "path": "frontend/src/components/ui/separator.tsx",
+      "bytes": 715,
+      "sha256": "2f54b6d6a582f9116dcc0690843a74f597574eca8977f2f19ada1ea0c6189089"
+    },
+    {
+      "path": "frontend/src/components/ui/skeleton.tsx",
+      "bytes": 236,
+      "sha256": "e2abf9a7a5716aea0b81d56a37dd482b6f211f987d93461c5b88039e621dd842"
+    },
+    {
+      "path": "frontend/src/components/ui/sonner.tsx",
+      "bytes": 737,
+      "sha256": "93b5de14dea9227cde733cd529452be9bf8ea75483f35cedcb3c9d1e99b27717"
+    },
+    {
+      "path": "frontend/src/components/ui/switch.tsx",
+      "bytes": 1147,
+      "sha256": "ee7198cfdc3611c6713054d55b43cdf38b4c996890279d45e15e4ef24b3f6b4f"
+    },
+    {
+      "path": "frontend/src/components/ui/table.tsx",
+      "bytes": 2683,
+      "sha256": "335339d24791bf588da3a19bffaf5d2303ee56c2cff4a9d87511b5a7f492dd66"
+    },
+    {
+      "path": "frontend/src/components/ui/tabs.tsx",
+      "bytes": 1780,
+      "sha256": "b09fcc31516de6508a1b09dab0c3514925faedfa8966307ecf9f769a68ac6f2b"
+    },
+    {
+      "path": "frontend/src/components/ui/textarea.tsx",
+      "bytes": 611,
+      "sha256": "43f95d3cedd9bc8a6c023fef96e78f6092cc57ce38d20e09a93498e417522d81"
+    },
+    {
+      "path": "frontend/src/components/ui/tooltip.tsx",
+      "bytes": 1200,
+      "sha256": "cf3e1666ded42805029d2a252ea212a4372a761ca14d01fe2a35ffce95203936"
+    },
+    {
+      "path": "frontend/src/hooks/use-exam-events.ts",
+      "bytes": 2907,
+      "sha256": "58884456fd69250253718450336c97cae732495f41c0028949d652354b4e4034"
+    },
+    {
+      "path": "frontend/src/index.css",
+      "bytes": 4643,
+      "sha256": "4231ee902e4008b23ad87be551500892066ab4cd6e8d5f0db753feaf72780c9d"
+    },
+    {
+      "path": "frontend/src/layouts/AdminLayout.tsx",
+      "bytes": 16000,
+      "sha256": "bfca326ec983e240774ea6879a31a080cfe75d3d6dedb7855cd8d14b8f072144"
+    },
+    {
+      "path": "frontend/src/layouts/LecturerLayout.tsx",
+      "bytes": 9556,
+      "sha256": "7b6d7702aa43aa4beb9b209d63b891bc04158b9331d6a291d6c4b204202e8627"
+    },
+    {
+      "path": "frontend/src/layouts/StudentLayout.tsx",
+      "bytes": 9946,
+      "sha256": "86825360ee7d71abb1c4a7389e1de24d2f5dcc2f2b8add642f47b3919a2f9aa3"
+    },
+    {
+      "path": "frontend/src/lib/admin-search-options.ts",
+      "bytes": 730,
+      "sha256": "b63f40804c6f07f663c9bb9b5c051415de1a84a9c2c70fa74fcbb8c2903dbd04"
+    },
+    {
+      "path": "frontend/src/lib/api-error.ts",
+      "bytes": 430,
+      "sha256": "daefb2651a116b64f031419e17305c23a678adb796b40fa9a26ce6e54f0c5e13"
+    },
+    {
+      "path": "frontend/src/lib/assignment-time.ts",
+      "bytes": 450,
+      "sha256": "d42a692c653184debce5cd553827307f8d604122997950e1c984602d509802c3"
+    },
+    {
+      "path": "frontend/src/lib/download.ts",
+      "bytes": 289,
+      "sha256": "6e9a04a5b35c29f6667ed9b4c6142a023c3a101cd7fc661d023ea951d034ae9b"
+    },
+    {
+      "path": "frontend/src/lib/exam-answer-queue.ts",
+      "bytes": 2264,
+      "sha256": "0aa3558c4a1dadfb7f974d943149c41d7c56edcb1e843507bf4a5db08a177821"
+    },
+    {
+      "path": "frontend/src/lib/notification-link.ts",
+      "bytes": 232,
+      "sha256": "9d4c53c28ae21671654a1f2bd59ac9b94b312ae591eacfc88a72d1aa3a2b2e9c"
+    },
+    {
+      "path": "frontend/src/lib/utils.ts",
+      "bytes": 166,
+      "sha256": "51bbf14cd1f84f49aab2e0dbee420137015d56b6677bb439e83a908cd292cce1"
+    },
+    {
+      "path": "frontend/src/main.tsx",
+      "bytes": 232,
+      "sha256": "5f49dce6e6cc4b5d678cf529ef892af0ab7dfa6afb300b11ad559224019b8b05"
+    },
+    {
+      "path": "frontend/src/pages/ForceChangePasswordPage.tsx",
+      "bytes": 5922,
+      "sha256": "d13df5dd9e537448f9327c4cd1707e7bb6bc7d59f9108bc3599ac036cb4ea3c2"
+    },
+    {
+      "path": "frontend/src/pages/LoginPage.tsx",
+      "bytes": 4423,
+      "sha256": "e979215fe50a407b54e249327429dd9fc4a8d725de5f46480896f8573a689739"
+    },
+    {
+      "path": "frontend/src/pages/NotificationsPage.tsx",
+      "bytes": 3381,
+      "sha256": "52742c1fcb93f4afb48bd564301a7417b90359262e56a9492a879a267184dc35"
+    },
+    {
+      "path": "frontend/src/pages/WorkDashboardPage.tsx",
+      "bytes": 33742,
+      "sha256": "939f12137622978bef79eb0e92a585dc9f4ec27d65062f875dfa98b0cf07cc0f"
+    },
+    {
+      "path": "frontend/src/pages/admin/AdminTimetablePage.tsx",
+      "bytes": 10596,
+      "sha256": "4ec078a6d4ddc3d4d1656269a7a7100f1835ea4afe6012de30a252d12369dc53"
+    },
+    {
+      "path": "frontend/src/pages/admin/AuditLogsPage.tsx",
+      "bytes": 22855,
+      "sha256": "76b04a4285cbeec947ba7aaacb2c0b76f9fbfc52189191442b0a5ca26ae1432f"
+    },
+    {
+      "path": "frontend/src/pages/admin/DepartmentDetailPage.tsx",
+      "bytes": 9772,
+      "sha256": "86a68c55d230b32ebd5c15640c612fe319dc4967d436a7b23aaa1bf92e52b0ca"
+    },
+    {
+      "path": "frontend/src/pages/admin/DepartmentsPage.tsx",
+      "bytes": 5109,
+      "sha256": "b62fe83fa899db774134e2d01ceee88cbb1339b67233d4cc68fe7bed3c769e3f"
+    },
+    {
+      "path": "frontend/src/pages/admin/FaceSettingsPage.tsx",
+      "bytes": 3839,
+      "sha256": "5b4b9eca2385ea5cc96ac6478ee0bbad4324edb70f00f1fc2815b4674ad97234"
+    },
+    {
+      "path": "frontend/src/pages/admin/LecturerProfilePage.tsx",
+      "bytes": 6431,
+      "sha256": "0d9d1c1861a1293f5b19ab62ad63d4ea299977385f3ff98c11c3082501470110"
+    },
+    {
+      "path": "frontend/src/pages/admin/LecturersPage.tsx",
+      "bytes": 21984,
+      "sha256": "257f483faa2fe226e0848f787f5527b139b5464e0eb4190d9314a8a83fdc1723"
+    },
+    {
+      "path": "frontend/src/pages/admin/SemestersPage.tsx",
+      "bytes": 10167,
+      "sha256": "b7af0a859867c383b3ed8da567c8eabfe7505fd37b8e90d9a0f69ec8d1800d56"
+    },
+    {
+      "path": "frontend/src/pages/admin/StudentProfilePage.tsx",
+      "bytes": 4363,
+      "sha256": "26bfb1f39e256364f6f69996f8631bbbe4ceab003349be1ef1a2f13ad186e690"
+    },
+    {
+      "path": "frontend/src/pages/admin/StudentsPage.tsx",
+      "bytes": 24597,
+      "sha256": "8dc69d11e27af56083c02ca7ec138262211c81ceab01c08edf5de933a16a9702"
+    },
+    {
+      "path": "frontend/src/pages/admin/SubjectsPage.tsx",
+      "bytes": 13019,
+      "sha256": "0e84ab2905185b9c5684feae6cf09b97560bbd9113bf112a325e08e54fb86263"
+    },
+    {
+      "path": "frontend/src/pages/admin/SystemAnnouncementsPage.tsx",
+      "bytes": 5058,
+      "sha256": "56763cfba0be81b42485fc3dc7de5fe686d09bda9e3ff8cc88d441f7ec9a3e92"
+    },
+    {
+      "path": "frontend/src/pages/admin/SystemInfoPage.tsx",
+      "bytes": 2981,
+      "sha256": "bc7fd4a479e19728c3feabfe9c53e08182204fcbded7828958aee041e2163d4b"
+    },
+    {
+      "path": "frontend/src/pages/admin/classes/ClassDetailPage.tsx",
+      "bytes": 22639,
+      "sha256": "288e334223c40f3d70b7171956cf43d869962b9e1a8384e13a0729d8093c21d7"
+    },
+    {
+      "path": "frontend/src/pages/admin/classes/ClassesPage.tsx",
+      "bytes": 27616,
+      "sha256": "8551bef8ff015f978bfa93ab34ae0e7155eac68bbbca3e4af8bf0919edd71a21"
+    },
+    {
+      "path": "frontend/src/pages/common/LearningMaterialsPage.tsx",
+      "bytes": 15396,
+      "sha256": "da9494b3db011d884a1b3a7bc9ad28d1a9ed5de2eb57b9398299788311e7a588"
+    },
+    {
+      "path": "frontend/src/pages/lecturer/LecturerClassDetailPage.tsx",
+      "bytes": 6251,
+      "sha256": "e6520793b31d35044b1381d9d57b38a7df1bc8dcd62c0fd6f7d60b2041346d4b"
+    },
+    {
+      "path": "frontend/src/pages/lecturer/LecturerClassesPage.tsx",
+      "bytes": 181,
+      "sha256": "d0008739accc22919b8fa882e6c69e9e20f929a4befaa1b3a31cb37118cde137"
+    },
+    {
+      "path": "frontend/src/pages/lecturer/LecturerDashboardPage.tsx",
+      "bytes": 6065,
+      "sha256": "b0cf42ce1bf293a51a2b98565d90858da38a21ecd581ca302196a2ad2499f040"
+    },
+    {
+      "path": "frontend/src/pages/lecturer/LecturerProfilePage.tsx",
+      "bytes": 12576,
+      "sha256": "4266788818a824182c6dff716a111cd87ca39b3a10f2ffd09a206ce97227aaf4"
+    },
+    {
+      "path": "frontend/src/pages/lecturer/LecturerTimetablePage.tsx",
+      "bytes": 2297,
+      "sha256": "6f51cedc964c6f4fbe0a5918641c0a055c47b0007e4212f673600d0619adf62a"
+    },
+    {
+      "path": "frontend/src/pages/lecturer/LiveAttendancePage.tsx",
+      "bytes": 10765,
+      "sha256": "d91d119a1ded3693d4a35d1b3d8b3b46c99a46810ab16b82597fe9e70d8440ce"
+    },
+    {
+      "path": "frontend/src/pages/student/FaceEnrollmentPage.tsx",
+      "bytes": 8571,
+      "sha256": "b66728baefe20353e0e640fc35e363bb6c59afb8ddd4dcf62332d932ff7d1a8d"
+    },
+    {
+      "path": "frontend/src/pages/student/StudentClassDetailPage.tsx",
+      "bytes": 5344,
+      "sha256": "ead531eca7e09744fd8dff6fff941ecba177a1585aea47ecb068eea7145c2f01"
+    },
+    {
+      "path": "frontend/src/pages/student/StudentClassesPage.tsx",
+      "bytes": 178,
+      "sha256": "2387ac5b1659be811f6b658178bf17e4931a7f0855d994ec1784a05339e8f1ba"
+    },
+    {
+      "path": "frontend/src/pages/student/StudentDashboardPage.tsx",
+      "bytes": 6363,
+      "sha256": "6e4a3d8efc3a4a4db2334897cb31f591543f67204c343022352cc4dc76019ab3"
+    },
+    {
+      "path": "frontend/src/pages/student/StudentExamTakingPage.tsx",
+      "bytes": 17677,
+      "sha256": "6c68d2c84c88186bb9377bc1e48b239162df1572da67c779d88c851d3daa5d70"
+    },
+    {
+      "path": "frontend/src/pages/student/StudentProfilePage.tsx",
+      "bytes": 12584,
+      "sha256": "bebea6d55790836ae3e425a30f257831ef16dc1121a20b50e7fc0ba90bd0a474"
+    },
+    {
+      "path": "frontend/src/pages/student/StudentTimetablePage.tsx",
+      "bytes": 2292,
+      "sha256": "4b0003c2fd92e213ff6d4ed74794a310df248c96928ea0f76296437abd337a75"
+    },
+    {
+      "path": "frontend/src/routes/index.tsx",
+      "bytes": 7685,
+      "sha256": "7574e69cccc4565a702342c3d7ee4fca93a0211a04b05952f82551aba1d8282d"
+    },
+    {
+      "path": "frontend/src/types/attendance.ts",
+      "bytes": 784,
+      "sha256": "7f13530017baa7232e1cce7313aa6db4245872d55b70471353d5d2b360a9775d"
+    },
+    {
+      "path": "frontend/src/types/class.ts",
+      "bytes": 2069,
+      "sha256": "8251b20172d28634ab8a86c71c0ebdde6058fdf1dc9fd3589a32055dedc443a7"
+    },
+    {
+      "path": "frontend/src/types/conflict.ts",
+      "bytes": 376,
+      "sha256": "3ce9e110f5327c665a69d94f5e4ba5f50421d88cd2d993af8b8330ee4452d1f0"
+    },
+    {
+      "path": "frontend/src/types/department.ts",
+      "bytes": 232,
+      "sha256": "00e221d9207c52364e1af7cf7ea1dd78b7b43ac0407527ad3003c7d6522f439c"
+    },
+    {
+      "path": "frontend/src/types/lecturer.ts",
+      "bytes": 912,
+      "sha256": "beb1dfd8dab70255eb72dad39bc983dc833d99be02a4dcb19bdd28b7449e1c7b"
+    },
+    {
+      "path": "frontend/src/types/schedule.ts",
+      "bytes": 592,
+      "sha256": "09ee2e173dbda95dc6108d0bd1e35cc3fa4fb2c89f965b4e6879c7d7c1728da4"
+    },
+    {
+      "path": "frontend/src/types/semester.ts",
+      "bytes": 403,
+      "sha256": "fbc8a52ce26cc9edd08a997080cfc40fba55731c66b29e436990d0aa15286b0a"
+    },
+    {
+      "path": "frontend/src/types/session.ts",
+      "bytes": 701,
+      "sha256": "13c7602ac30d1fff1f917d08e0f93db78e43aa50bbe25436be2f408a65940cf2"
+    },
+    {
+      "path": "frontend/src/types/student.ts",
+      "bytes": 1543,
+      "sha256": "91b511c2f80155ad22cc2a299fd86a4c8b823656615b3864968fece030b1cb81"
+    },
+    {
+      "path": "frontend/src/types/subject.ts",
+      "bytes": 434,
+      "sha256": "3d23463d9d3bbb2c042046f86506ffafac8203c1ecb8bef3de49ff86a4e1409e"
+    },
+    {
+      "path": "frontend/src/types/timetable.ts",
+      "bytes": 416,
+      "sha256": "be2868bc26dddbe29dc887d67554a3a120aa0150bf537ce9f4a994e74b218617"
+    },
+    {
+      "path": "frontend/src/types/user.ts",
+      "bytes": 622,
+      "sha256": "684dd5749cfbaa73b2a8329dcb284bbb1c3b7f44137945c3d90c0bcac9b1194d"
+    },
+    {
+      "path": "frontend/tailwind.config.js",
+      "bytes": 2370,
+      "sha256": "a29c2ae13b534324e955252f5d37c8f4589d202d66703236766992293d99e33b"
+    },
+    {
+      "path": "frontend/tsconfig.app.json",
+      "bytes": 573,
+      "sha256": "8c858c07c42fa9efc5c857daa4bd9545a9b8ec01963db15562805dec7b90e036"
+    },
+    {
+      "path": "frontend/tsconfig.json",
+      "bytes": 119,
+      "sha256": "770b4140bbb581e2dfd9ea9946ffc9c75a1d86ba7d2db5f77c83e37cbdf9d808"
+    },
+    {
+      "path": "frontend/tsconfig.node.json",
+      "bytes": 304,
+      "sha256": "75125b044a84abe1d064eb1f3ae1400f3804a766c5895bea5d1e335a3cf28d8c"
+    },
+    {
+      "path": "frontend/vite.config.ts",
+      "bytes": 457,
+      "sha256": "91187a5a6c330c6cbf623b1409f2a9efefbb0618f55fd85452d51323cc0d3c38"
+    },
+    {
+      "path": "scripts/check_demo_logins.py",
+      "bytes": 3589,
+      "sha256": "da1540d3e4f664d74540ed5039ecf126af7ca7c827e79841b42545f18e4966e5"
+    },
+    {
+      "path": "scripts/diagnose_accounts.py",
+      "bytes": 1322,
+      "sha256": "053afce641ca5dde15a710ab708c34a85090fa0b159b26f2571ff3be9b63b074"
+    },
+    {
+      "path": "scripts/preflight_import.py",
+      "bytes": 1371,
+      "sha256": "b51104b0134c8f893ba7ab42331f18ce9b3c2dd7a323797bea4d5281e369e613"
+    },
+    {
+      "path": "scripts/safe_seed.py",
+      "bytes": 1190,
+      "sha256": "56cdd6040f3abad7f02a1b0c7aa61aa294a0aafbfab284fa8c14707c65b3ee25"
+    },
+    {
+      "path": "scripts/seed.py",
+      "bytes": 631,
+      "sha256": "5f8cc1545276ece74eabae60d3e41c723f445473fefe991ddbb5b76c8d9f8fa9"
+    },
+    {
+      "path": "scripts/test_faceid_unit.py",
+      "bytes": 1744,
+      "sha256": "d2e9fe297c069c60c9bcc2a32c4fc8cc7369dccebd0ec7dfa0eef65d8a45d7a8"
+    },
+    {
+      "path": "scripts/verify_http.py",
+      "bytes": 2949,
+      "sha256": "de42bf4a29d9de2ec9a63f2c0202378407f9b6c098fa0116e2b9d07f875cdf74"
+    },
+    {
+      "path": "scripts/wait_for_mysql.py",
+      "bytes": 2493,
+      "sha256": "67fa06186731ad13c694eae6021e76f9f898e580c0b1e64ff2e5d68ee80b2856"
+    },
+    {
+      "path": "scripts/windows_lms.ps1",
+      "bytes": 14710,
+      "sha256": "91adc0fae26c1038459521f61ccecd4cf8469dc4571ff0f2f61fbb5089477491"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+# Local teaching/demo deployment; bind ports to loopback only.
+# Stable project name preserves the database volume when the folder is renamed.
+name: lms_faceid_capstone_v33
+services:
+  mysql:
+    image: mysql:8.0
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:?Set MYSQL_ROOT_PASSWORD in the local environment}
+      MYSQL_DATABASE: ${DB_NAME:-lms_db}
+      MYSQL_USER: ${DB_USER:-lms_user}
+      MYSQL_PASSWORD: ${DB_PASSWORD:?Set DB_PASSWORD in the local environment}
+    ports:
+      - "127.0.0.1:3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --default-time-zone='+00:00'
+    healthcheck:
+      test: ["CMD-SHELL", 'MYSQL_PWD="$${MYSQL_PASSWORD}" mysql --protocol=TCP --host=127.0.0.1 --user="$${MYSQL_USER}" --database="$${MYSQL_DATABASE}" --silent --skip-column-names -e "SELECT 1" >/dev/null 2>&1']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+  backend:
+    build:
+      context: ./backend
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      DB_HOST: mysql
+      DB_PORT: 3306
+      DB_NAME: ${DB_NAME:-lms_db}
+      DB_USER: ${DB_USER:-lms_user}
+      DB_PASSWORD: ${DB_PASSWORD:?Set DB_PASSWORD in the local environment}
+      SECRET_KEY: ${SECRET_KEY:?Set SECRET_KEY in the local environment}
+      # The shared env file must not grant the application the MySQL root password.
+      MYSQL_ROOT_PASSWORD: ""
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+    ports:
+      - "127.0.0.1:8001:8000"
+    volumes:
+      - ./backend:/app
+      - ./uploads:/app/uploads
+      - ./scripts:/app/scripts
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=3).read()"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 60s
+    depends_on:
+      mysql:
+        condition: service_healthy
+  frontend:
+    build:
+      context: ./frontend
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:5174:5173"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      backend:
+        condition: service_healthy
+    environment:
+      LMS_API_PROXY: http://backend:8000
+volumes:
+  mysql_data:
+    name: lms_faceid_capstone_v33_mysql_data
